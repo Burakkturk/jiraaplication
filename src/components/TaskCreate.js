@@ -7,7 +7,7 @@ function TaskCreate() {
         <label className="task-label">Başlık</label>
         <input className="task-input" />
         <label className="task-label">Task Giriniz!</label>
-        <textarea className="task-input" />
+        <textarea className="task-input" rows={5}/>
         <button className="task-button">Oluştur</button>
       </form>
     </div>
