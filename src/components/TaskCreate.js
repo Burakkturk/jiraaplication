@@ -10,6 +10,10 @@ function TaskCreate() {
   const handleTaskChange = (event) => {
     setTaskDesc(event.target.value);
   };
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    // setTaskDesc(event.target.value);
+  };
 
   return (
     <div className="task-create">
@@ -25,7 +29,7 @@ function TaskCreate() {
           className="task-input"
           rows={5}
         />
-        <button className="task-button">Oluştur</button>
+        <button className="task-button" onClick={handleSubmit}>Oluştur</button>
       </form>
     </div>
   );
