@@ -1,9 +1,9 @@
 import { useState } from "react";
-function TaskCreate() {
+function TaskCreate({onCreate}) {
   const [title, setTitle] = useState("");
   const [taskDesc, setTaskDesc] = useState("");
 
-  console.log(title,taskDesc);
+ 
   const handleChange = (event) => {
     setTitle(event.target.value);
   };
@@ -12,7 +12,9 @@ function TaskCreate() {
   };
   const handleSubmit = (event) => {
     event.preventDefault()
-    // setTaskDesc(event.target.value);
+    onCreate(title,taskDesc)
+    setTitle("")
+    setTaskDesc("")
   };
 
   return (
